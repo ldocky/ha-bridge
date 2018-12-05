@@ -2,10 +2,12 @@ FROM ubuntu:bionic
 MAINTAINER ldocky 
 VOLUME ["/config"]
 
+ENV     DEBIAN_FRONTEND=noninteractive
 RUN     apt-get update
 RUN	apt-get install -y software-properties-common 
 RUN     add-apt-repository -y ppa:webupd8team/java && \
 	apt-get update
+RUN     echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true
 RUN	apt-get install -y \
 	wget \
 	oracle-java8-installer \
