@@ -15,10 +15,10 @@ RUN	apt-get install -y \
 	usermod -u 99 nobody && \
 	usermod -g 100 nobody
 
-RUN mkdir /config/
-WORKDIR /config/
+RUN mkdir /src/
+WORKDIR /src/
 RUN wget https://github.com/bwssytems/ha-bridge/releases/download/v5.2.2RC2/ha-bridge-5.2.2RC2.jar
 
 RUN chown -R nobody:users /config
 
-ENTRYPOINT "java -jar /config/ha-bridge-latest.jar"
+ENTRYPOINT "java -jar /src/ha-bridge-latest.jar"
