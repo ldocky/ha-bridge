@@ -17,7 +17,7 @@ RUN	apt-get install -y \
 
 RUN mkdir /src/
 WORKDIR /src/
-RUN wget https://github.com/bwssytems/ha-bridge/releases/download/v5.2.2RC2/ha-bridge-5.2.2RC2.jar latest.jar
+RUN wget https://github.com/bwssytems/ha-bridge/releases/download/v5.2.2RC2/ha-bridge-5.2.2RC2.jar /src/latest.jar
 
 RUN chown -R nobody:users /config
 
