@@ -21,4 +21,4 @@ RUN wget https://github.com/bwssytems/ha-bridge/releases/download/v5.2.2RC2/ha-b
 
 RUN chown -R nobody:users /config
 
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+ENTRYPOINT ["java", "-jar", "/src/latest.jar"]
