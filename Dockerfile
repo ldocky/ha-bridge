@@ -7,11 +7,11 @@ RUN     apt-get update
 RUN	apt-get install -y software-properties-common 
 RUN     add-apt-repository ppa:linuxuprising/java && \
 	apt-get update
-RUN     echo oracle-java10-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
+RUN     echo oracle-java12-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
 RUN	apt-get install -y \
 	wget \
-	oracle-java10-installer \
-	oracle-java10-set-default && \
+	oracle-java12-installer \
+	oracle-java12-set-default && \
 	usermod -u 99 nobody && \
 	usermod -g 100 nobody
 
