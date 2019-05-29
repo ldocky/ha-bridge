@@ -7,7 +7,7 @@ RUN     apt-get update
 RUN	apt-get install -y software-properties-common 
 RUN     add-apt-repository ppa:linuxuprising/java && \
 	apt-get update
-RUN     echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
+RUN     echo oracle-java10-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
 RUN	apt-get install -y \
 	wget \
 	oracle-java10-installer \
