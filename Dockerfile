@@ -5,13 +5,13 @@ VOLUME ["/config"]
 ENV     DEBIAN_FRONTEND=noninteractive
 RUN     apt-get update
 RUN	apt-get install -y software-properties-common 
-RUN     add-apt-repository -y ppa:webupd8team/java && \
+RUN     add-apt-repository ppa:linuxuprising/java && \
 	apt-get update
 RUN     echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
 RUN	apt-get install -y \
 	wget \
-	oracle-java8-installer \
-	oracle-java8-set-default && \
+	oracle-java10-installer \
+	oracle-java10-set-default && \
 	usermod -u 99 nobody && \
 	usermod -g 100 nobody
 
