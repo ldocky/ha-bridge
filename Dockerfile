@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 MAINTAINER ldocky 
 VOLUME ["/config"]
 
@@ -17,7 +17,7 @@ RUN	apt-get install -y \
 
 RUN mkdir /src/
 WORKDIR /src/
-RUN wget https://github.com/bwssytems/ha-bridge/releases/download/v5.2.2/ha-bridge-5.2.2.jar -O /src/latest.jar
+RUN wget https://github.com/bwssytems/ha-bridge/releases/download/v5.3.1RC1/ha-bridge-5.3.1RC1.jar -O /src/latest.jar
 
 RUN chown -R nobody:users /config
 
