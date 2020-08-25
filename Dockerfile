@@ -7,7 +7,7 @@ RUN     apt-get update
 RUN	apt-get install -y software-properties-common 
 RUN	apt-get install -y \
 	wget \
-	openjdk-8-jre \
+	openjdk-11-jre-headless \
 	usermod -u 99 nobody && \
 	usermod -g 100 nobody
 
